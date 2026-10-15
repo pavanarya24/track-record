@@ -1,0 +1,130 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Trading Track Record | Arya Somayajula Pavan Kumar</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--ink:#0B1F33;--teal:#0E7C86;--red:#C0392B;--mut:#5B6770;--line:#E3E8EC;--card:#F5F8FA;--glow:rgba(14,124,134,.12);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#08131F;--ink:#E8EEF3;--teal:#2DB5C0;--red:#FF7468;--mut:#9AA9B5;--line:#1C3149;--card:#0F2236;--glow:rgba(45,181,192,.16);color-scheme:dark}}
+:root[data-theme=dark]{--bg:#08131F;--ink:#E8EEF3;--teal:#2DB5C0;--red:#FF7468;--mut:#9AA9B5;--line:#1C3149;--card:#0F2236;--glow:rgba(45,181,192,.16);color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:70px}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:19}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;align-items:center;gap:18px;padding:13px max(20px,calc((100% - 1080px)/2));background:var(--bg);border-bottom:1px solid var(--line);font-size:13px;overflow-x:auto;white-space:nowrap}
+nav a,nav button{color:var(--mut);text-decoration:none;font:500 13px Inter;background:none;border:0;cursor:pointer;padding:0}nav a:hover{color:var(--teal)}nav b{margin-right:auto;color:var(--ink)}
+.w{max-width:1080px;margin:0 auto;padding:0 24px}section{padding:92px 0 0}
+.ey{font:600 12px/1 Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+h2{font-size:clamp(26px,4vw,40px);line-height:1.12;letter-spacing:-.02em;margin:0 0 10px;font-weight:700;max-width:820px}h3{margin:0 0 6px;font-size:20px;line-height:1.3}
+.sub{color:var(--mut);max-width:680px;margin:0 0 30px}
+.hero{padding:88px 0 8px;background:radial-gradient(900px 420px at 85% -10%,var(--glow),transparent)}
+h1{font-size:clamp(44px,8.5vw,92px);line-height:1;letter-spacing:-.035em;margin:0 0 18px;font-weight:800}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+.grid{display:grid;gap:16px}.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.g4{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.big{font-size:clamp(34px,5.4vw,58px);font-weight:800;letter-spacing:-.03em;line-height:1.05;font-variant-numeric:tabular-nums}.big.s{font-size:clamp(26px,3.2vw,36px)}
+.lab{font-size:12.5px;color:var(--mut);font-weight:500;margin-bottom:6px}.kk{font:700 12px Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+.neg{color:var(--red)}.pos{color:var(--teal)}.note{font-size:12.5px;color:var(--mut);margin-top:14px}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:18px;background:var(--card)}table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;min-width:520px}
+th{font:600 11.5px Inter;letter-spacing:.09em;text-transform:uppercase;color:var(--mut);text-align:left;padding:14px 18px}td{padding:14px 18px;border-top:1px solid var(--line)}td:first-child{font-weight:600}tr:hover td{background:var(--glow)}
+.seg{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px;margin-bottom:22px}
+.seg button{border:0;background:none;color:var(--mut);font:600 14px Inter;padding:10px 22px;border-radius:999px;cursor:pointer;transition:.25s}.seg button.on{background:var(--ink);color:var(--bg)}
+.reveal{opacity:0;transform:translateY(18px);transition:.7s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}
+.m{margin:15px 0}.r{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:6px}.tr{height:10px;border-radius:9px;background:var(--line);overflow:hidden}
+.fl{height:100%;width:0;border-radius:9px;background:var(--teal);transition:width 1.2s cubic-bezier(.2,.7,.2,1)}.in .fl{width:var(--w)}.fl.rd{background:var(--red)}.fl.nv{background:var(--ink)}
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-bottom:16px}.flow .card{position:relative}.flow .card:not(:last-child)::after{content:"\2192";position:absolute;right:-13px;top:50%;font-size:18px;color:var(--teal);z-index:2;background:var(--bg);border-radius:50%;line-height:1}
+svg{display:block;overflow:visible}svg text{font:500 11px Inter,system-ui,sans-serif;fill:var(--mut)}svg .v{font-weight:700;font-size:12px}
+.bar{transform-box:fill-box;animation:gp .9s cubic-bezier(.2,.7,.2,1) both}.bar.p{transform-origin:50% 100%}.bar.n{transform-origin:50% 0}.bar:hover{opacity:.75}@keyframes gp{from{transform:scaleY(0)}}
+.ln{stroke-dasharray:1;animation:dr 1.5s ease both}@keyframes dr{from{stroke-dashoffset:1}}
+#tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bg);padding:8px 12px;border-radius:10px;font:600 13px Inter;opacity:0;transition:opacity .15s;z-index:50;white-space:nowrap}
+.lg{display:flex;gap:18px;font-size:13px;color:var(--mut);margin-bottom:10px}.lg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
+.btn{display:inline-block;background:var(--ink);color:var(--bg);padding:14px 26px;border-radius:999px;font-weight:600;text-decoration:none}
+footer{padding:80px 0 60px;color:var(--mut);font-size:13px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style></head><body>
+<nav><b>Arya Somayajula Pavan Kumar</b><a href="#fit">Fit</a><a href="#how">Method</a><a href="#res">Results</a><a href="#acc">Accounts</a><a href="#feb">February</a><a href="#risk">Risk</a><a href="#tools">Tools</a><a href="#ver">Verify</a><button id="th" aria-label="Toggle theme">Theme</button></nav>
+<header class="hero"><div class="w reveal">
+<div class="ey">Two managed client accounts | US equities, intraday | Jan to Aug 2026</div><h1>Trading Track Record</h1>
+<p class="sub">Arya Somayajula Pavan Kumar. Every figure below comes from Fidelity account activity exports, with client identifiers removed.</p>
+<div class="grid g2"><div class="card"><div class="lab">Account A net P&amp;L, 83 trading days</div><div class="big" data-c="35913">$35,913</div><div class="pos" style="font-weight:600">+119.7% on $30,000</div></div>
+<div class="card"><div class="lab">Account B net P&amp;L, 108 trading days</div><div class="big" data-c="67375">$67,375</div><div class="pos" style="font-weight:600">+224.6% on $30,000</div></div></div></div></header>
+
+<section id="fit"><div class="w reveal"><div class="ey">Role fit</div><h2>Intraday US equity trader who also builds his own trading infrastructure</h2><p class="sub"></p>
+<div class="grid g2"><div id="ex" class="grid"></div><div><div class="kk">What I bring</div><div id="br" class="grid"></div></div></div></div></section>
+
+<section id="how"><div class="w reveal"><div class="ey">How I trade</div><h2>Rule-based intraday scalping on liquid names</h2><p class="sub"></p>
+<div id="fw" class="flow"></div><div class="grid g2" id="rr"></div></div></section>
+
+<section id="res"><div class="w reveal"><div class="ey">Results at a glance</div><h2>Both accounts, side by side</h2><p class="sub"></p>
+<div class="tw"><table id="t1"></table></div><p class="note">Realized P&amp;L net of commissions and fees. A trade is one symbol's position from flat to flat.</p>
+<div class="grid g2" style="margin-top:22px" id="mt"></div></div></section>
+
+<section id="acc"><div class="w reveal" data-fn="acc"><div class="ey">Account detail</div><h2 id="at"></h2><p class="sub" id="ac" style="color:var(--teal);font-weight:600"></p>
+<div class="seg"><button class="on" data-a="A">Account A</button><button data-a="B">Account B</button></div>
+<div id="ak" class="grid g4"></div>
+<div class="grid g2" style="margin-top:16px"><div class="card"><div class="lab">Month-end realized equity</div><div id="eq"></div></div><div class="card"><div class="lab">Monthly net P&amp;L</div><div id="mb"></div></div></div>
+<p class="note">Equity points are cumulative sums of the rounded monthly P&amp;L from $30,000, with the final point set to the reported end value, so intramonth peaks are not shown. Monthly figures may differ from totals by $1. Hover or tap any point.</p></div></section>
+
+<section id="feb"><div class="w reveal" data-fn="feb"><div class="ey">February</div><h2>February was the weakest month for both accounts, and it changed how risk is handled</h2><p class="sub"></p>
+<div class="card" style="margin-bottom:16px"><div class="lg"><span><i style="background:var(--teal)"></i>Account A</span><span><i style="background:var(--ink)"></i>Account B</span><span><i style="background:var(--red)"></i>Loss month</span></div><div id="fb"></div></div>
+<div class="grid g2" style="margin-bottom:16px"><div class="card"><div class="lab">Account B, 4 Feb</div><div class="big s neg">-$25,237</div></div><div class="card"><div class="lab">Account A, 25 Feb</div><div class="big s neg">-$4,984</div></div></div>
+<div class="grid g3" id="f3"></div></div></section>
+
+<section id="risk"><div class="w reveal" data-fn="risk"><div class="ey">Risk and execution</div><h2>Risk per trade is small, but losing days can be large</h2><p class="sub">Fidelity exports contain no stop orders, so risk is measured from realized losses.</p>
+<div class="card" style="margin-bottom:16px"><div class="lab">Worst to best outcome on one scale</div><div id="rg"></div></div>
+<div class="tw"><table id="t2"></table></div></div></section>
+
+<section id="tools"><div class="w reveal"><div class="ey">Infrastructure</div><h2>Tools I built and use in daily trading</h2><p class="sub"></p><div class="grid g2" id="tl"></div>
+<p class="note">GitHub: <a href="https://github.com/pavanarya24" style="color:var(--teal)">github.com/pavanarya24</a></p></div></section>
+
+<section id="ver"><div class="w reveal"><div class="ey">Verification and next steps</div><h2>Everything here can be checked</h2><p class="sub"></p>
+<div class="grid g3" id="vf"></div><div class="grid g2" style="margin-top:16px" id="vm"></div>
+<p style="margin-top:28px"><a class="btn" href="mailto:aryapavan0369@gmail.com">aryapavan0369@gmail.com</a></p></div></section>
+<footer><div class="w">Past results do not guarantee future results.</div></footer><div id="tip"></div>
+<script>
+const $=s=>document.querySelector(s),f=n=>(n<0?'-':'')+'$'+Math.abs(n).toLocaleString('en-US'),sg=n=>(n>0?'+':'')+f(n);
+const rd=t=>t.replace(/(-\$[\d,]+(?: \(-[\d.]+%\))?|-[\d.]+%)/g,'<span class="neg">$1</span>');
+const cd=(id,a)=>$(id).innerHTML=a.map(([k,t])=>`<div class="card"><div class="kk">${k}</div><div>${rd(t)}</div></div>`).join('');
+const tb=(id,h,r)=>$(id).innerHTML='<tr>'+h.map(x=>`<th>${x}</th>`).join('')+'</tr>'+r.map(x=>'<tr>'+x.map(y=>`<td>${rd(y)}</td>`).join('')+'</tr>').join('');
+const ml=(l,v,mx,c,t)=>`<div class="m"><div class="r"><span>${l}</span><b>${rd(t)}</b></div><div class="tr"><div class="fl ${c}" style="--w:${v/mx*100}%"></div></div></div>`;
+const tip=$('#tip');function tp(e){const t=e.target.closest&&e.target.closest('[data-t]');if(!t){tip.style.opacity=0;return}tip.innerHTML=t.dataset.t;tip.style.opacity=1;tip.style.left=Math.max(8,Math.min(e.clientX+14,innerWidth-tip.offsetWidth-8))+'px';tip.style.top=(e.clientY+16)+'px'}
+addEventListener('pointermove',tp);addEventListener('pointerdown',tp);
+function bars(id,labs,ser,hl){const Wd=640,Ht=300,pl=8,pt=30,pb=30,al=ser.flatMap(s=>s.v).filter(v=>v!=null),mx=Math.max(...al,0),mn=Math.min(...al,0),sc=(Ht-pt-pb)/(mx-mn),y0=pt+mx*sc,g=(Wd-2*pl)/labs.length,k=ser.length,bw=Math.min(46,g*.72/k);
+let h=`<svg viewBox="0 0 ${Wd} ${Ht}" width="100%">`;if(hl>=0)h+=`<rect x="${pl+hl*g}" y="4" width="${g}" height="${Ht-pb}" rx="10" fill="var(--red)" opacity=".08"/>`;
+h+=`<line x1="0" x2="${Wd}" y1="${y0}" y2="${y0}" stroke="var(--mut)" opacity=".5"/>`;
+labs.forEach((l,i)=>{h+=`<text x="${pl+i*g+g/2}" y="${Ht-8}" text-anchor="middle">${l}</text>`;ser.forEach((s,j)=>{const v=s.v[i];if(v==null)return;const x=pl+i*g+(g-k*bw-(k-1)*4)/2+j*(bw+4),hh=Math.max(Math.abs(v)*sc,1),y=v>=0?y0-hh:y0;
+h+=`<rect class="bar ${v>=0?'p':'n'}" x="${x}" y="${y}" width="${bw}" height="${hh}" rx="5" fill="${v>=0?s.c:'var(--red)'}" opacity="${v<0&&j?.6:1}" style="animation-delay:${i*70}ms" data-t="${s.n||''} ${l}: ${sg(v)}"/>`;
+if(k==1)h+=`<text class="v" x="${x+bw/2}" y="${v>=0?y-7:y+hh+15}" text-anchor="middle" style="fill:${v>=0?'var(--ink)':'var(--red)'}">${sg(v)}</text>`})});$(id).innerHTML=h+'</svg>'}
+function line(id,labs,vals){const Wd=640,Ht=300,pl=50,pr=14,pt=20,pb=30,lo=Math.floor(Math.min(...vals,3e4)/1e4)*1e4,hi=Math.ceil(Math.max(...vals)/1e4)*1e4,X=i=>pl+i*(Wd-pl-pr)/(vals.length-1),Y=v=>pt+(hi-v)/(hi-lo)*(Ht-pt-pb);
+let h=`<svg viewBox="0 0 ${Wd} ${Ht}" width="100%"><defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--teal);stop-opacity:.3"/><stop offset="1" style="stop-color:var(--teal);stop-opacity:0"/></linearGradient></defs>`;
+for(let v=lo;v<=hi;v+=1e4)h+=`<line x1="${pl}" x2="${Wd-pr}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)"/><text x="${pl-8}" y="${Y(v)+4}" text-anchor="end">$${v/1e3}k</text>`;
+h+=`<line x1="${pl}" x2="${Wd-pr}" y1="${Y(3e4)}" y2="${Y(3e4)}" stroke="var(--mut)" stroke-dasharray="4 4" opacity=".7"/>`;
+const d=vals.map((v,i)=>(i?'L':'M')+X(i)+' '+Y(v)).join('');
+h+=`<path d="${d}L${X(vals.length-1)} ${Y(lo)}L${pl} ${Y(lo)}Z" fill="url(#ag)"/><path class="ln" pathLength="1" d="${d}" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linejoin="round"/>`;
+vals.forEach((v,i)=>{h+=`<text x="${X(i)}" y="${Ht-8}" text-anchor="middle">${labs[i]}</text><circle cx="${X(i)}" cy="${Y(v)}" r="4.5" fill="var(--bg)" stroke="var(--teal)" stroke-width="2.5"/><circle cx="${X(i)}" cy="${Y(v)}" r="16" fill="transparent" data-t="${labs[i]}: ${f(v)}"/>`});$(id).innerHTML=h+'</svg>'}
+const AC={A:{t:'Account A: $35,913 in 83 trading days, with a 29.2% drawdown in Feb to Mar',m:['Jan','Feb','Mar','Apr','May','Jun'],v:[1768,-5449,974,18797,21926,-2104],end:65913,pk:73583,dd:'-$9,573',dp:'-29.2% on 25 Mar 2026',cap:'April and May produced most of the gain.'},
+B:{t:'Account B: $67,375 in 108 trading days; a 42.9% drawdown followed a $38,847 January',m:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug'],v:[38847,-18857,7042,6416,17743,15650,-1427,1962],end:97375,pk:99531,dd:'-$34,128',dp:'-42.9% on 25 Feb 2026',cap:'Activity and P&L slowed from July.'}};
+let cur='A';
+function acc(){const a=AC[cur];$('#at').textContent=a.t;$('#ac').textContent=a.cap;
+$('#ak').innerHTML=[['Start','$30,000'],['Realized equity, end',f(a.end)],['Realized equity, peak',f(a.pk)],['Max drawdown, '+a.dp,a.dd]].map(([k,v])=>`<div class="card"><div class="lab">${rd(k)}</div><div class="big s">${rd(v)}</div></div>`).join('');
+const e=[3e4];a.v.forEach(x=>e.push(e[e.length-1]+x));e[e.length-1]=a.end;line('#eq',['Start',...a.m],e);bars('#mb',a.m,[{c:'var(--teal)',v:a.v}],1)}
+document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{cur=b.dataset.a;document.querySelectorAll('.seg button').forEach(x=>x.classList.toggle('on',x===b));acc()});
+const FN={acc,
+feb(){bars('#fb',AC.B.m,[{n:'Account A',c:'var(--teal)',v:[...AC.A.v,null,null]},{n:'Account B',c:'var(--ink)',v:AC.B.v}],1)},
+risk(){const rows=[['Account A, day',-4984,3992],['Account B, day',-25237,7019],['Account A, trade',-3469,3790],['Account B, trade',-10208,6730]],Wd=640,pl=150,lo=-29e3,hi=12e3,X=v=>pl+(v-lo)/(hi-lo)*(Wd-pl-30),Ht=rows.length*56+36;
+let h=`<svg viewBox="0 0 ${Wd} ${Ht}" width="100%">`;[-2e4,-1e4,0,1e4].forEach(v=>h+=`<line x1="${X(v)}" x2="${X(v)}" y1="0" y2="${Ht-26}" stroke="${v?'var(--line)':'var(--mut)'}"/><text x="${X(v)}" y="${Ht-6}" text-anchor="middle">${f(v)}</text>`);
+rows.forEach(([l,w,b],i)=>{const y=14+i*56;h+=`<text x="0" y="${y+12}" style="fill:var(--ink);font-size:13px;font-weight:600">${l}</text><rect class="bar p" x="${X(w)}" y="${y}" width="${X(0)-X(w)}" height="16" rx="8" fill="var(--red)" data-t="Worst: ${f(w)}" style="transform-origin:100% 50%"/><rect class="bar p" x="${X(0)}" y="${y}" width="${X(b)-X(0)}" height="16" rx="8" fill="var(--teal)" data-t="Best: ${f(b)}"/><text class="v" x="${X(w)-8}" y="${y+12}" text-anchor="end" style="fill:var(--red)">${f(w)}</text><text class="v" x="${X(b)+8}" y="${y+12}" style="fill:var(--teal)">${f(b)}</text>`});$('#rg').innerHTML=h+'</svg>'}};
+cd('#ex',[['Oct 2025 to present','Founder and lead trader, Cycle Zero: trades client accounts under trading authority.'],['May to Dec 2025','Equity trader, SHAH Equity, a private hedge fund: US stocks executed through Fidelity Active Trader Pro.'],['4+ years','US equities, gold and FX. Top 7 of about 9,000 participants in a fastbull.com forex and gold competition (April 2025).']]);
+cd('#br',[['Execution','Order flow and execution quality focus'],['Sizing','Risk-adjusted sizing'],['Tooling','Python tooling for scanning, reporting and reconciliation']]);
+cd('#fw',[['1 Setup','Opening-range breakout and 9 EMA / VWAP breakouts'],['2 Confirm','Cumulative volume delta divergence and a 200 EMA trend filter'],['3 Execute','200 to 500 share clips in high-liquidity, high-beta stocks'],['4 Hold','Minutes, concentrated in the first hour after the open']]);
+cd('#rr',[['Risk','Per-trade and per-day limits across the client book; strategies that fail validation are retired.'],['Reporting','Daily P&L reconciled in TickerScribe.']]);
+tb('#t1',['','Account A','Account B'],[['Period','29 Jan to 18 Jun 2026','5 Jan to 25 Aug 2026'],['Trading days','83','108'],['Net P&L on $30,000 start','$35,913 (+119.7%)','$67,375 (+224.6%)'],['Closed trades (per day)','963 (11.6)','1,968 (18.2)'],['Win rate, trades | days','53.2% | 65.1%','59.3% | 71.2%'],['Profit factor, trades | days','1.41 | 2.15','1.46 | 1.99'],['Average win | average loss','$240 | -$207','$182 | -$188'],['Max drawdown (realized)','-$9,573 (-29.2%), 25 Mar 2026','-$34,128 (-42.9%), 25 Feb 2026']]);
+$('#mt').innerHTML=[`<div class="card"><div class="kk">Win rate</div>${ml('A, trades',53.2,100,'','53.2%')+ml('A, days',65.1,100,'','65.1%')+ml('B, trades',59.3,100,'nv','59.3%')+ml('B, days',71.2,100,'nv','71.2%')}</div>`,
+`<div class="card"><div class="kk">Profit factor</div>${ml('A, trades',1.41,2.5,'','1.41')+ml('A, days',2.15,2.5,'','2.15')+ml('B, trades',1.46,2.5,'nv','1.46')+ml('B, days',1.99,2.5,'nv','1.99')}</div>`,
+`<div class="card"><div class="kk">Average win vs average loss</div>${ml('A win',240,260,'','$240')+ml('A loss',207,260,'rd','-$207')+ml('B win',182,260,'nv','$182')+ml('B loss',188,260,'rd','-$188')}</div>`,
+`<div class="card"><div class="kk">Max drawdown (realized)</div>${ml('A, 25 Mar 2026',29.2,50,'rd','-29.2%')+ml('B, 25 Feb 2026',42.9,50,'rd','-42.9%')}</div>`].join('');
+cd('#f3',[['What happened','Account A lost $5,449 and Account B lost $18,857. Account B had a -$25,237 day on 4 Feb; Account A had -$4,984 on 25 Feb. No intraday stop-loss rule existed yet.'],['What changed','Every February session audited. 2% daily loss limit adopted. 3-losing-day rule that hands the account to another trader. Rules documented for clients.'],['What followed','Account A: April +$18,797, May +$21,926. Account B positive every month from March to June (+$7,042, +$6,416, +$17,743, +$15,650). Both accounts set new equity highs. Days losing more than 2% of equity still occurred after March: about 4 in Account A and 9 in Account B.']]);
+tb('#t2',['','Account A','Account B'],[['Average loss per losing trade','-$207','-$188'],['Average loss as % of trade size','-0.24%','-0.20%'],['Median trade size (notional)','$41,909','$37,034'],['Worst trade | best trade','-$3,469 | $3,790','-$10,208 | $6,730'],['Average winning day | losing day','$1,244 | -$1,078','$1,830 | -$2,268'],['Best day | worst day','$3,992 | -$4,984','$7,019 | -$25,237'],['Executions per day | fees paid','223 | $6,269','244 | $6,160']]);
+cd('#tl',[['Scanner','Real-time WebSocket multi-stock scanner using lead-lag correlation signals.'],['Terminal','Python trading terminal with order flow analytics (volume delta, footprint).'],['Reporting','Parser that turns Fidelity trade confirmations into client reports, with FIFO lot-matching P&L attribution.'],['Research','Platform with walk-forward and Monte Carlo validation; failed ideas are frozen, not traded.']]);
+cd('#vf',[['Trade history','Full trade history for both accounts attached as masked CSVs.'],['Live review','Same history synced in TickerScribe; I can walk through it live on a call.'],['Statements','Broker statements can be requested from the account holders.']]);
+cd('#vm',[['Method','Realized cash flow per position, net of fees, reconciled to raw account cash flows. Equity curves start at $30,000 and exclude deposits and withdrawals.'],['Limits','Two accounts, one 5 to 8 month window, realized P&L only. Past results do not guarantee future results.']]);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;el.classList.add('in');io.unobserve(el);if(el.dataset.fn)FN[el.dataset.fn]();
+el.querySelectorAll('[data-c]').forEach(n=>{const T=+n.dataset.c,s=performance.now();(function q(t){const p=Math.min((t-s)/1300,1);n.textContent=f(Math.round(T*(1-Math.pow(1-p,3))));if(p<1)requestAnimationFrame(q)})(s)})}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+$('#th').onclick=()=>{const r=document.documentElement;r.dataset.theme=(r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'))=='dark'?'light':'dark'};
+</script></body></html>
