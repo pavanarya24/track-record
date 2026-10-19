@@ -66,6 +66,44 @@ footer{border-top:1px solid var(--line);margin-top:80px;background:linear-gradie
 @media(max-width:700px){.hero{padding-top:66px}.hero::before{right:-28%;top:3%;opacity:.65}.hero::after{right:3%;top:9%;opacity:.6}.card:hover{transform:translateY(-2px)}nav{gap:14px}.w{padding:0 18px}section{padding-top:68px}}
 @media(prefers-reduced-motion:reduce){.card,.btn{transition:none}.card:hover,.btn:hover{transform:none}}
 
+
+/* February drawdown: preserve the original facts, give the section clear visual hierarchy */
+#feb .ey { color: var(--red); }
+#feb h2 { max-width: 900px; }
+#feb > .w > .card:first-of-type {
+  border: 1px solid rgba(192,57,43,.55);
+  border-left: 4px solid var(--red);
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(192,57,43,.12), transparent 55%),
+    var(--card);
+  box-shadow: 0 18px 50px rgba(100,20,20,.10);
+}
+#feb .grid.g2 .card {
+  background:
+    linear-gradient(145deg, rgba(192,57,43,.11), transparent 70%),
+    var(--card);
+  border-color: rgba(192,57,43,.35);
+}
+#feb .grid.g2 .big.neg {
+  color: var(--red);
+  text-shadow: 0 0 28px rgba(192,57,43,.16);
+}
+#feb #fb {
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(3,15,25,.22);
+}
+#feb #f3 .card {
+  border-top: 2px solid var(--edge);
+}
+#feb #f3 .card:first-child { border-top-color: var(--red); }
+#feb #f3 .card:nth-child(2) { border-top-color: var(--teal); }
+#feb #f3 .card:nth-child(3) { border-top-color: var(--ink); }
+@media (max-width: 700px) {
+  #feb #fb { padding: 4px; }
+}
+
 </style></head><body>
 <nav><b>Arya Somayajula Pavan Kumar</b><a href="#fit">Fit</a><a href="#how">Method</a><a href="#res">Results</a><a href="#acc">Accounts</a><a href="#feb">February</a><a href="#risk">Risk</a><a href="#tools">Tools</a><a href="#ver">Verify</a><button id="th" aria-label="Toggle theme">Theme</button></nav>
 <header class="hero"><div class="w reveal">
