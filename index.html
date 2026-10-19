@@ -159,7 +159,7 @@ function applyGlobalScope(scope){
  const pf=names.map(k=>({name:'Account '+k,color:colors[k],values:k==='A'?[1.41,2.15]:[1.46,1.99]}));
  svgBars('winChart',['Trades','Days'],win,{percent:true});
  svgBars('pfChart',['Trades','Days'],pf);
- const monthly=names.map(k=>({name:'Account '+k,color:colors[k],values:dashboardMonths.map(m=>{const i=DATA[k].months.indexOf(m);return i<0?null:DATA[k].pnl[i]})}));
+ const monthly=names.map(k=>({n:'Account '+k,c:colors[k],v:dashboardMonths.map(m=>{const i=DATA[k].months.indexOf(m);return i<0?null:DATA[k].pnl[i]})}));
  dashboardBars('febChart',dashboardMonths,monthly,false);
  document.querySelectorAll('[data-global-scope]').forEach(b=>b.title=label);
 }
