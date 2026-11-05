@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Record — Arya Somayajula Pavan Kumar</title>
+<meta name="description" content="Full trading record: two US-equity intraday accounts, Jan–Aug 2026. Monthly realized P&L, drawdowns and risk statistics, net of fees.">
+<meta name="theme-color" content="#F6F3EC">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="og.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pavanarya24.github.io/track-record/record.html">
+<meta property="og:title" content="The Record — Arya Somayajula Pavan Kumar">
+<meta property="og:description" content="Every month, no smoothing. Two US-equity intraday accounts, Jan–Aug 2026, net of fees.">
+<meta property="og:image" content="https://pavanarya24.github.io/track-record/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches||/[?&]motion=1/.test(location.search))document.documentElement.classList.add('motion');</script>
+<style>
+:root{
+  --navy:#0B1F4D;
+  --paper:#F6F3EC;
+  --ink:#0B1F4D;
+  --muted:#5C6478;
+  --accent:#D9452B;
+  --rule:rgba(11,31,77,.14);
+  --serif:'Instrument Serif',Georgia,'Times New Roman',serif;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,'SF Mono',Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+html.motion{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+::selection{background:var(--accent);color:var(--paper)}
+
+nav{
+  position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:10px clamp(16px,4vw,40px);
+  padding-top:calc(10px + env(safe-area-inset-top));
+  font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  background:rgba(246,243,236,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule);
+}
+nav .mark{font-family:var(--serif);font-size:16px;letter-spacing:0;text-transform:none;text-decoration:none}
+nav .mark em{font-style:italic;color:var(--accent)}
+nav ul{display:flex;gap:clamp(10px,2.4vw,24px);list-style:none;margin:0;padding:0;flex-wrap:wrap;justify-content:flex-end}
+nav li{display:flex} /* row height follows the padded link, so wrapped rows can't overlap */
+nav a{text-decoration:none;color:var(--muted);transition:color .2s;padding:10px 0} /* 34px tall hit box */
+nav a:hover,nav a:focus-visible{color:var(--ink)}
+nav .back{color:var(--accent)}
+@media (max-width:600px){nav ul li:not(:first-child){display:none}} /* phones: keep the one nav action, no wrap */
+
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+
+header.top{padding:clamp(56px,10vh,110px) 0 clamp(32px,5vh,48px)}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:0}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,8vw,5.6rem);line-height:.94;letter-spacing:-.03em;margin:20px 0 0;max-width:16ch}
+h1 em{font-style:italic;color:var(--accent)}
+.lede{max-width:56ch;color:var(--muted);font-size:clamp(.98rem,1.5vw,1.08rem);margin:22px 0 0;line-height:1.65}
+.lede strong{color:var(--ink);font-weight:500}
+
+section{padding:clamp(44px,7vh,72px) 0;border-top:1px solid var(--rule)}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.7rem,4vw,2.6rem);line-height:1;letter-spacing:-.02em;margin:14px 0 0}
+h2 em{font-style:italic;color:var(--accent)}
+.sub{color:var(--muted);font-size:15px;margin:14px 0 0;max-width:58ch;line-height:1.6}
+
+/* snapshot */
+.snap{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:clamp(20px,3vw,32px);margin-top:clamp(28px,5vh,40px)}
+.snap b{display:block;font-family:var(--mono);font-weight:500;font-size:clamp(1.5rem,4.2vw,2.3rem);line-height:1;letter-spacing:-.03em;color:var(--accent);font-variant-numeric:tabular-nums}
+.snap b.neg{color:var(--accent)}
+.snap span{display:block;margin-top:9px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);line-height:1.55;max-width:22ch}
+
+/* tables */
+.scroll{overflow-x:auto;margin-top:clamp(24px,4vh,36px);-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:520px}
+caption{text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-bottom:12px}
+th,td{text-align:left;padding:11px 14px 11px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:400;border-bottom-color:var(--ink);white-space:nowrap}
+td:first-child{color:var(--muted)}
+td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+td.n.neg{color:var(--accent)}
+td.n.pos{color:var(--ink)}
+tr:last-child td{border-bottom:none}
+
+/* months */
+.months{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(32px,5vw,56px);margin-top:clamp(28px,5vh,40px)}
+.months h3{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:400;margin:0 0 4px}
+.months .end{font-family:var(--mono);font-size:12px;color:var(--ink);margin:0 0 18px}
+.mrow{
+  display:grid;grid-template-columns:44px 1fr 84px;gap:10px;align-items:center;width:100%;
+  padding:6px 6px 6px 0;background:none;border:0;font:inherit;color:inherit;text-align:left;
+  cursor:pointer;border-radius:2px;transition:background .15s;
+}
+.mrow:hover{background:rgba(11,31,77,.05)}
+.mrow:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mrow[aria-expanded="true"]{background:rgba(217,69,43,.07)}
+.mrow .m{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mrow .m sup{color:var(--accent);font-size:10px;margin-left:1px}
+.mrow .bar{height:18px;position:relative;background:rgba(11,31,77,.05);overflow:hidden}
+.mrow .bar i{position:absolute;top:0;bottom:0;background:var(--ink);display:block;min-width:2px;transition:background .15s}
+.mrow .bar i.neg{background:var(--accent)}
+.mrow:hover .bar i,.mrow[aria-expanded="true"] .bar i{background:var(--navy)}
+.mrow:hover .bar i.neg,.mrow[aria-expanded="true"] .bar i.neg{background:#b33520}
+.mrow .v{font-family:var(--mono);font-size:12px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.mrow .v.neg{color:var(--accent)}
+.zero{position:absolute;top:0;bottom:0;width:1px;background:var(--rule)}
+.axis{display:grid;grid-template-columns:44px 1fr 84px;gap:10px;margin-top:8px;font-family:var(--mono);font-size:9px;letter-spacing:.08em;color:var(--muted)}
+.axis>span:nth-child(2){display:flex;justify-content:space-between}
+.mdetail{margin-top:14px;padding:16px 18px;border:1px solid var(--rule);border-left:2px solid var(--accent);background:rgba(11,31,77,.03);font-size:13px}
+.mdetail h4{margin:0 0 10px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:400}
+.mdetail dl{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:0}
+.mdetail dt{color:var(--muted)}
+.mdetail dd{margin:0;font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.mdetail dd.neg{color:var(--accent)}
+.mdetail .caveat{margin:12px 0 0;padding-top:10px;border-top:1px solid var(--rule);color:var(--muted);font-size:12px;line-height:1.55}
+@media (max-width:960px){.months{grid-template-columns:1fr}}
+@media (max-width:480px){
+  .mrow{grid-template-columns:1fr auto;grid-template-areas:"m v" "bar bar";gap:3px 10px;padding:9px 6px 9px 0}
+  .mrow .m{grid-area:m}
+  .mrow .v{grid-area:v}
+  .mrow .bar{grid-area:bar;height:14px}
+  .axis{grid-template-columns:1fr;margin-top:6px}
+  .axis>span:first-child,.axis>span:last-child{display:none}
+}
+
+/* drawdown block */
+.dd{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:clamp(22px,4vw,40px);margin-top:clamp(26px,4vh,36px)}
+.dd b{display:block;font-family:var(--mono);font-weight:500;font-size:clamp(1.4rem,3.6vw,2rem);letter-spacing:-.03em;color:var(--accent);line-height:1;font-variant-numeric:tabular-nums}
+.dd span{display:block;margin-top:9px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);line-height:1.55}
+
+/* callout */
+.note{border-left:2px solid var(--accent);padding:2px 0 2px 18px;margin:clamp(28px,4vh,40px) 0 0;font-size:15px;color:var(--muted);max-width:62ch;line-height:1.65}
+.note strong{color:var(--ink);font-weight:500}
+
+/* verify */
+.verify{background:var(--navy);color:var(--paper);border-top:none}
+.verify .eyebrow{color:rgba(246,243,236,.55)}
+.verify h2{color:var(--paper)}
+.verify h2 em{color:var(--accent)}
+.verify .sub{color:rgba(246,243,236,.7)}
+.verify ul{list-style:none;padding:0;margin:clamp(26px,4vh,36px) 0 0;display:grid;gap:14px;max-width:60ch}
+.verify li{display:flex;gap:14px;align-items:baseline;font-size:15px;color:rgba(246,243,236,.82);line-height:1.6}
+.verify li b{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.1em;min-width:2.2em}
+.verify .limits{margin:clamp(32px,5vh,48px) 0 0;padding-top:22px;border-top:1px solid rgba(246,243,236,.18);font-size:13px;color:rgba(246,243,236,.55);max-width:62ch;line-height:1.7}
+.cta{display:inline-flex;align-items:center;gap:12px;margin-top:clamp(30px,5vh,44px);font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--paper);text-decoration:none;border:1px solid rgba(246,243,236,.3);padding:16px 22px;transition:background .25s,color .25s,border-color .25s}
+.cta:hover,.cta:focus-visible{background:var(--paper);color:var(--navy);border-color:var(--paper)}
+
+footer{max-width:1080px;margin:0 auto;padding:clamp(40px,7vh,64px) clamp(20px,5vw,40px);display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:baseline;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding-bottom:calc(clamp(40px,7vh,64px) + env(safe-area-inset-bottom))}
+footer a{text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px}
+footer a:hover{border-color:var(--accent);color:var(--accent)}
+
+.motion .reveal{opacity:0;transform:translateY(12px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.motion .reveal.in{opacity:1;transform:none}
+
+@media print{
+  nav,.cta{display:none!important}
+  .reveal{opacity:1!important;transform:none!important}
+  section{break-inside:avoid}
+  .verify{background:#fff;color:#000}
+  .verify h2,.verify .sub,.verify li,.verify .limits{color:#000}
+}
+@media (prefers-reduced-motion:reduce){
+  html:not(.motion) *,html:not(.motion) *::before,html:not(.motion) *::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="mark" href="index.html">arya<em>*</em></a>
+  <ul>
+    <li><a class="back" href="index.html">← The story</a></li>
+    <li><a href="#accounts">Accounts</a></li>
+    <li><a href="#months">Months</a></li>
+    <li><a href="#risk">Risk</a></li>
+    <li><a href="#verify">Verify</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+  <header class="top">
+    <p class="eyebrow">The record · Jan–Aug 2026</p>
+    <h1>Every month. <em>No smoothing.</em></h1>
+    <p class="lede">Two US-equity intraday accounts, both starting at <strong>$30,000</strong>. All figures are reported net realized P&amp;L after commissions and fees. Nothing here is annualized, adjusted or modeled.</p>
+
+    <div class="snap reveal">
+      <div><b data-count="103288" data-prefix="$">$103,288</b><span>Combined net realized P&amp;L</span></div>
+      <div><b data-count="35913" data-prefix="+$">+$35,913</b><span>Account A · 83 trading days</span></div>
+      <div><b data-count="67375" data-prefix="+$">+$67,375</b><span>Account B · 108 trading days</span></div>
+      <div><b>−29.2%</b><span>Account A max drawdown · −$9,573</span></div>
+      <div><b>−42.9%</b><span>Account B max drawdown · −$34,128</span></div>
+      <div><b>−$24,306</b><span>Combined February net P&amp;L</span></div>
+    </div>
+  </header>
+
+  <section id="accounts">
+    <p class="eyebrow reveal">01 / Accounts</p>
+    <h2 class="reveal">Two accounts, <em>side by side.</em></h2>
+    <p class="sub reveal">Different statement windows, same trader and method. Account A ran January to June; Account B ran January to August.</p>
+
+    <div class="scroll reveal">
+      <table>
+        <caption>Account comparison · reported figures</caption>
+        <thead>
+          <tr><th scope="col">Metric</th><th scope="col">Account A</th><th scope="col">Account B</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Statement period</td><td class="n">29 Jan – 18 Jun 2026</td><td class="n">5 Jan – 25 Aug 2026</td></tr>
+          <tr><td>Starting capital</td><td class="n">$30,000</td><td class="n">$30,000</td></tr>
+          <tr><td>Net realized P&amp;L</td><td class="n pos">+$35,913 (+119.7%)</td><td class="n pos">+$67,375 (+224.6%)</td></tr>
+          <tr><td>Trading days</td><td class="n">83</td><td class="n">108</td></tr>
+          <tr><td>Closed trades · per day</td><td class="n">963 · 11.6</td><td class="n">1,968 · 18.2</td></tr>
+          <tr><td>Win rate · trades | days</td><td class="n">53.2% | 65.1%</td><td class="n">59.3% | 71.2%</td></tr>
+          <tr><td>Profit factor · trades | days</td><td class="n">1.41 | 2.15</td><td class="n">1.46 | 1.99</td></tr>
+          <tr><td>Average win | average loss</td><td class="n">$240 | −$207</td><td class="n">$182 | −$188</td></tr>
+          <tr><td>Max realized drawdown</td><td class="n neg">−$9,573 (−29.2%) · 25 Mar</td><td class="n neg">−$34,128 (−42.9%) · 25 Feb</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="months">
+    <p class="eyebrow reveal">02 / Months</p>
+    <h2 class="reveal">Monthly realized P&amp;L, <em>as reported.</em></h2>
+    <p class="sub reveal">Each account is scaled to its own largest month, so small months stay readable. Red bars are losing months. Select a bar to see the figures behind it.</p>
+
+    <div class="months reveal">
+      <div>
+        <h3>Account A</h3>
+        <p class="end">Ends at $65,913 realized equity</p>
+        <button class="mrow" type="button" data-account="A" data-month="Jan" data-pnl="1768" aria-expanded="false" aria-controls="detA"><span class="m">Jan</span><span class="bar"><span class="zero" style="left:50%"></span><i style="left:50%;width:4%"></i></span><span class="v">+$1,768</span></button>
+        <button class="mrow" type="button" data-account="A" data-month="Feb" data-pnl="-5449" aria-expanded="false" aria-controls="detA"><span class="m">Feb</span><span class="bar"><span class="zero" style="left:50%"></span><i class="neg" style="right:50%;width:12.4%"></i></span><span class="v neg">−$5,449</span></button>
+        <button class="mrow" type="button" data-account="A" data-month="Mar" data-pnl="974" aria-expanded="false" aria-controls="detA"><span class="m">Mar</span><span class="bar"><span class="zero" style="left:50%"></span><i style="left:50%;width:2.2%"></i></span><span class="v">+$974</span></button>
+        <button class="mrow" type="button" data-account="A" data-month="Apr" data-pnl="18797" aria-expanded="false" aria-controls="detA"><span class="m">Apr</span><span class="bar"><span class="zero" style="left:50%"></span><i style="left:50%;width:42.9%"></i></span><span class="v">+$18,797</span></button>
+        <button class="mrow" type="button" data-account="A" data-month="May" data-pnl="21926" aria-expanded="false" aria-controls="detA"><span class="m">May</span><span class="bar"><span class="zero" style="left:50%"></span><i style="left:50%;width:50%"></i></span><span class="v">+$21,926</span></button>
+        <button class="mrow" type="button" data-account="A" data-month="Jun" data-pnl="-2104" data-partial="statement ends 18 Jun 2026" aria-expanded="false" aria-controls="detA"><span class="m">Jun<sup>†</sup></span><span class="bar"><span class="zero" style="left:50%"></span><i class="neg" style="right:50%;width:4.8%"></i></span><span class="v neg">−$2,104</span></button>
+        <div class="axis" aria-hidden="true"><span></span><span><span>−$21.9k</span><span>0</span><span>+$21.9k</span></span><span></span></div>
+        <div class="mdetail" id="detA" aria-live="polite" hidden></div>
+      </div>
+
+      <div>
+        <h3>Account B</h3>
+        <p class="end">Ends at $97,375 realized equity</p>
+        <button class="mrow" type="button" data-account="B" data-month="Jan" data-pnl="38847" aria-expanded="false" aria-controls="detB"><span class="m">Jan</span><span class="bar"><span class="zero" style="left:50%"></span><i style="left:50%;width:50%"></i></span><span class="v">+$38,847</span></button>
+        <button class="mrow" type="button" data-account="B" data-month="Feb" data-pnl="-18857" aria-expanded="false" aria-controls="detB"><span class="m">Feb</span><span class="bar"><span class="zero" style="left:50%"></span><i class="neg" style="right:50%;width:24.3%"></i></span><span class="v neg">−$18,857</span></button>
+        <button class="mrow" type="button" data-account="B" data-month="Mar" data-pnl="7042" aria-expanded="false" aria-controls="detB"><span class="m">Mar</span><span class="bar"><span class="zero" style="left:50%"></span><i style="left:50%;width:9.1%"></i></span><span class="v">+$7,042</span></button>
+        <button class="mrow" type="button" data-account="B" data-month="Apr" data-pnl="6416" aria-expanded="false" aria-controls="detB"><span class="m">Apr</span><span class="bar"><span class="zero" style="left:50%"></span><i style="left:50%;width:8.3%"></i></span><span class="v">+$6,416</span></button>
+        <button class="mrow" type="button" data-account="B" data-month="May" data-pnl="17743" aria-expanded="false" aria-controls="detB"><span class="m">May</span><span class="bar"><span class="zero" style="left:50%"></span><i style="left:50%;width:22.8%"></i></span><span class="v">+$17,743</span></button>
+        <button class="mrow" type="button" data-account="B" data-month="Jun" data-pnl="15650" aria-expanded="false" aria-controls="detB"><span class="m">Jun</span><span class="bar"><span class="zero" style="left:50%"></span><i style="left:50%;width:20.1%"></i></span><span class="v">+$15,650</span></button>
+        <button class="mrow" type="button" data-account="B" data-month="Jul" data-pnl="-1427" aria-expanded="false" aria-controls="detB"><span class="m">Jul</span><span class="bar"><span class="zero" style="left:50%"></span><i class="neg" style="right:50%;width:1.8%"></i></span><span class="v neg">−$1,427</span></button>
+        <button class="mrow" type="button" data-account="B" data-month="Aug" data-pnl="1962" data-partial="statement ends 25 Aug 2026" aria-expanded="false" aria-controls="detB"><span class="m">Aug<sup>†</sup></span><span class="bar"><span class="zero" style="left:50%"></span><i style="left:50%;width:2.5%"></i></span><span class="v">+$1,962</span></button>
+        <div class="axis" aria-hidden="true"><span></span><span><span>−$38.8k</span><span>0</span><span>+$38.8k</span></span><span></span></div>
+        <div class="mdetail" id="detB" aria-live="polite" hidden></div>
+      </div>
+    </div>
+
+    <p class="sub reveal" style="margin-top:28px">Bars are scaled to each account's own largest month, so a $1,768 month stays visible next to a $38,847 one. Read the printed dollars to compare across accounts.<br><br><strong style="color:var(--ink);font-weight:500">† Partial month.</strong> Account A's statement ends 18 Jun 2026 and Account B's ends 25 Aug 2026. The last bar in each series covers part of a month, not a full-month run rate — discount it accordingly. Select any bar for that month's detail.</p>
+  </section>
+
+  <section id="drawdown">
+    <p class="eyebrow reveal">03 / Drawdown</p>
+    <h2 class="reveal">February is <em>not a footnote.</em></h2>
+    <p class="sub reveal">Before March 2026 there was no intraday stop-loss rule. Losses could accumulate past any daily threshold, and they did. The deepest drawdown in either account happened in that window.</p>
+
+    <div class="dd reveal">
+      <div><b>−$24,306</b><span>Combined February net P&amp;L</span></div>
+      <div><b>−$34,128</b><span>Account B max realized drawdown · 25 Feb</span></div>
+      <div><b>−$25,237</b><span>Account B worst single day · 4 Feb</span></div>
+      <div><b>−$4,984</b><span>Account A worst single day · 25 Feb</span></div>
+    </div>
+
+    <p class="note reveal"><strong>What changed.</strong> A 2% daily loss limit and a three-losing-day handoff rule were adopted after February. <strong>What it did not fix.</strong> Days losing more than 2% of equity still occurred after March — about four in Account A and nine in Account B. The rule reduced neither the need for monitoring nor the importance of disclosure.</p>
+  </section>
+
+  <section id="risk">
+    <p class="eyebrow reveal">04 / Risk</p>
+    <h2 class="reveal">Returns are only <em>half the record.</em></h2>
+    <p class="sub reveal">Risk is read from realized losses, because the broker exports do not contain stop orders. Outliers matter more than averages.</p>
+
+    <div class="scroll reveal">
+      <table>
+        <caption>Risk statistics · reported figures</caption>
+        <thead>
+          <tr><th scope="col">Measure</th><th scope="col">Account A</th><th scope="col">Account B</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Average loss per losing trade</td><td class="n neg">−$207</td><td class="n neg">−$188</td></tr>
+          <tr><td>Average loss as % of trade size</td><td class="n neg">−0.24%</td><td class="n neg">−0.20%</td></tr>
+          <tr><td>Median trade size (notional)</td><td class="n">$41,909</td><td class="n">$37,034</td></tr>
+          <tr><td>Worst trade | best trade</td><td class="n">−$3,469 | +$3,790</td><td class="n">−$10,208 | +$6,730</td></tr>
+          <tr><td>Average winning day | losing day</td><td class="n">$1,244 | −$1,078</td><td class="n">$1,830 | −$2,268</td></tr>
+          <tr><td>Best day | worst day</td><td class="n">$3,992 | −$4,984</td><td class="n">$7,019 | −$25,237</td></tr>
+          <tr><td>Executions per day | fees paid</td><td class="n">223 | $6,269</td><td class="n">244 | $6,160</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="sub reveal" style="margin-top:24px">Trades represent one symbol's position from flat to flat. All P&amp;L figures are reported net of commissions and fees.</p>
+  </section>
+
+  <section id="verify" class="verify">
+    <div class="wrap" style="padding:0">
+      <p class="eyebrow reveal">05 / Verification</p>
+      <h2 class="reveal">Check the numbers. <em>Then discount them.</em></h2>
+      <p class="sub reveal">Supporting evidence can be reviewed without publishing client identifiers. The figures on this page should be read with the limitations below.</p>
+
+      <ul class="reveal">
+        <li><b>01</b><span>Trade history — full history for both accounts, masked CSVs.</span></li>
+        <li><b>02</b><span>Live review — the same history synced in TickerScribe, available as a guided review.</span></li>
+        <li><b>03</b><span>Statements — broker statements requestable from the account holders.</span></li>
+      </ul>
+
+      <p class="limits reveal"><strong style="color:rgba(246,243,236,.8)">Methodology.</strong> Realized cash flow per position, net of fees, reconciled to raw account cash flows. Equity curves start at $30,000 and exclude deposits and withdrawals.<br><br><strong style="color:rgba(246,243,236,.8)">Limitations.</strong> Two accounts, one five-to-eight-month window, realized P&amp;L only. Past results do not guarantee future results.</p>
+
+      <a class="cta reveal" href="index.html">Read the story behind it <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <span>Arya Somayajula Pavan Kumar · Trading record</span>
+  <span><a href="mailto:aryapavan0369@gmail.com">aryapavan0369@gmail.com</a> · <a href="https://github.com/pavanarya24" target="_blank" rel="noopener">GitHub ↗</a></span>
+</footer>
+
+<script>
+(function(){
+  var reduce = !document.documentElement.classList.contains('motion');
+  function countUp(el){
+    var target = parseFloat(el.dataset.count),
+        pre = el.dataset.prefix || '',
+        suf = el.dataset.suffix || '';
+    function fmt(n){ return pre + Math.round(n).toLocaleString('en-US') + suf; }
+    if (reduce){ el.textContent = fmt(target); return; }
+    var t0 = performance.now(), DUR = 1100;
+    (function step(now){
+      var p = Math.min(1, (now - t0) / DUR);
+      el.textContent = fmt(target * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) requestAnimationFrame(step); else el.textContent = fmt(target);
+    })(t0);
+  }
+  /* ---------- month detail ---------- */
+  (function(){
+    var totals = {A: 35913, B: 67375};
+    function money(n){
+      return (n < 0 ? '−$' : '+$') + Math.abs(Math.round(n)).toLocaleString('en-US');
+    }
+    function pct(n){ return (n < 0 ? '−' : '+') + Math.abs(n).toFixed(1) + '%'; }
+    function closeAll(){
+      document.querySelectorAll('.mrow[aria-expanded="true"]').forEach(function(r){
+        r.setAttribute('aria-expanded','false');
+      });
+      document.querySelectorAll('.mdetail').forEach(function(b){
+        b.hidden = true; b.innerHTML = '';
+      });
+    }
+
+    document.querySelectorAll('.mrow').forEach(function(row){
+      row.addEventListener('click', function(){
+        var box = document.getElementById('det' + row.dataset.account),
+            rows = Array.prototype.slice.call(box.parentNode.querySelectorAll('.mrow')),
+            i = rows.indexOf(row),
+            wasOpen = row.getAttribute('aria-expanded') === 'true';
+        closeAll();
+        if (wasOpen) return;
+
+        row.setAttribute('aria-expanded','true');
+        var pnl = +row.dataset.pnl,
+            run = rows.slice(0, i + 1).reduce(function(s, r){ return s + (+r.dataset.pnl); }, 0),
+            share = pnl / totals[row.dataset.account] * 100,
+            losses = rows.filter(function(r){ return +r.dataset.pnl < 0; })
+                         .sort(function(a, b){ return (+a.dataset.pnl) - (+b.dataset.pnl); }),
+            rank = losses.indexOf(row),
+            verdict = pnl < 0
+              ? 'Losing month · ' + (rank + 1) + ' of ' + losses.length + ' by depth'
+              : 'Profitable month';
+
+        var h = document.createElement('h4');
+        h.textContent = row.dataset.month + ' 2026 · Account ' + row.dataset.account;
+        box.appendChild(h);
+
+        var dl = document.createElement('dl');
+        [
+          ['Net P&L', money(pnl), pnl < 0],
+          ['Share of account total', pct(share) + ' of ' + money(totals[row.dataset.account]), pnl < 0],
+          ['Running total after ' + row.dataset.month, money(run), run < 0],
+          ['Result', verdict, false]
+        ].forEach(function(cell){
+          var dt = document.createElement('dt'), dd = document.createElement('dd');
+          dt.textContent = cell[0];
+          dd.textContent = cell[1];
+          if (cell[2]) dd.className = 'neg';
+          dl.appendChild(dt); dl.appendChild(dd);
+        });
+        box.appendChild(dl);
+
+        if (row.dataset.partial){
+          var p = document.createElement('p');
+          p.className = 'caveat';
+          p.textContent = 'Partial month — ' + row.dataset.partial + '. This bar covers part of a month, so it is not a full-month run rate and should be discounted when reading the series.';
+          box.appendChild(p);
+        }
+        box.hidden = false;
+      });
+    });
+
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape') closeAll();
+    });
+  })();
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      en.target.classList.add('in');
+      en.target.querySelectorAll('[data-count]').forEach(function(n){
+        if (n.dataset.done) return;
+        n.dataset.done = '1';
+        countUp(n);
+      });
+      io.unobserve(en.target);
+    });
+  }, {threshold:0, rootMargin:'0px 0px 15% 0px'}); /* start before entry — a negative bottom margin leaves the last rows of the screen blank */
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
