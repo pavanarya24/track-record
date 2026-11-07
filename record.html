@@ -192,7 +192,7 @@ footer a:hover{border-color:var(--accent);color:var(--accent)}
     <div class="snap reveal">
       <div><b data-count="103288" data-prefix="$">$103,288</b><span>Combined net realized P&amp;L</span></div>
       <div><b data-count="35913" data-prefix="+$">+$35,913</b><span>Account A · 83 trading days</span></div>
-      <div><b data-count="67375" data-prefix="+$">+$67,375</b><span>Account B · 108 trading days</span></div>
+      <div><b>+$61,214.97 after fees (+$67,374.71 before fees); 12,208 executions, 1,968 flat-to-flat closed trades; 108 trading days, Jan–Aug 2026.</b><span>Account B · 108 trading days</span></div>
       <div><b>−29.2%</b><span>Account A max drawdown · −$9,573</span></div>
       <div><b>−42.9%</b><span>Account B max drawdown · −$34,128</span></div>
       <div><b>−$24,306</b><span>Combined February net P&amp;L</span></div>
@@ -213,7 +213,7 @@ footer a:hover{border-color:var(--accent);color:var(--accent)}
         <tbody>
           <tr><td>Statement period</td><td class="n">29 Jan – 18 Jun 2026</td><td class="n">5 Jan – 25 Aug 2026</td></tr>
           <tr><td>Starting capital</td><td class="n">$30,000</td><td class="n">$30,000</td></tr>
-          <tr><td>Net realized P&amp;L</td><td class="n pos">+$35,913 (+119.7%)</td><td class="n pos">+$67,375 (+224.6%)</td></tr>
+          <tr><td>Net realized P&amp;L</td><td class="n pos">+$35,913 (+119.7%)</td><td class="n pos">+$61,214.97 after fees (+$67,374.71 before fees); 12,208 executions, 1,968 flat-to-flat closed trades; 108 trading days, Jan–Aug 2026.</td></tr>
           <tr><td>Trading days</td><td class="n">83</td><td class="n">108</td></tr>
           <tr><td>Closed trades · per day</td><td class="n">963 · 11.6</td><td class="n">1,968 · 18.2</td></tr>
           <tr><td>Win rate · trades | days</td><td class="n">53.2% | 65.1%</td><td class="n">59.3% | 71.2%</td></tr>
@@ -346,7 +346,7 @@ footer a:hover{border-color:var(--accent);color:var(--accent)}
   }
   /* ---------- month detail ---------- */
   (function(){
-    var totals = {A: 35913, B: 67375};
+    var totals = {A: 35913, B: 61214.97};
     function money(n){
       return (n < 0 ? '−$' : '+$') + Math.abs(Math.round(n)).toLocaleString('en-US');
     }
